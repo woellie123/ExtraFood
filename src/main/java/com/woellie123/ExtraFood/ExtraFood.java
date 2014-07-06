@@ -1,5 +1,6 @@
 package com.woellie123.ExtraFood;
 
+import com.woellie123.ExtraFood.configuration.ConfigurationHandler;
 import com.woellie123.ExtraFood.proxy.IProxy;
 import com.woellie123.ExtraFood.reference.Reference;
 import cpw.mods.fml.common.Mod;
@@ -21,7 +22,7 @@ public class ExtraFood
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
     }
 
     @Mod.EventHandler
