@@ -8,7 +8,7 @@ import net.minecraftforge.common.config.Configuration;
 import java.io.File;
 
 public class ConfigurationHandler
-{
+{//testing if this works now
     public static Configuration configuration;
     public static boolean testValue = false;
 
