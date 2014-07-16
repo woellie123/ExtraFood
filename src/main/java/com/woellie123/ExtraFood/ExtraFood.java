@@ -4,6 +4,7 @@ import com.woellie123.ExtraFood.handler.ConfigurationHandler;
 import com.woellie123.ExtraFood.proxy.IProxy;
 import com.woellie123.ExtraFood.reference.Reference;
 import com.woellie123.ExtraFood.utility.LogHelper;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -24,6 +25,7 @@ public class ExtraFood
     public void preInit(FMLPreInitializationEvent event)
     {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+        FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         LogHelper.info("PreInitialization complete!");
     }
 
