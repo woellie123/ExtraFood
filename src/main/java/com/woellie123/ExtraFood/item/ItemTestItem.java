@@ -5,5 +5,6 @@ public class ItemTestItem extends ItemExtraFood
     public ItemTestItem()
     {
         super();
+        this.setUnlocalizedName("testItem");
     }
 }
